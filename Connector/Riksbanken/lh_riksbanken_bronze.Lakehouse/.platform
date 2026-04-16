@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "lh_riksbanken_bronze"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5237c40d-44c1-ac9c-46e8-0ee36bbefa69"
+  }
+}

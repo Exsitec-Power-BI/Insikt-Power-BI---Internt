@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "nb_riksbanken_bronze"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "76f6399d-b8b4-8987-4681-635320a49040"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/variableLibrary/definition/variables/1.0.0/schema.json",
+  "variables": [
+    {
+      "name": "VISMA_SCOPE",
+      "note": "",
+      "type": "String",
+      "value": "vismanet_erp_service_api:read"
+    },
+    {
+      "name": "CLIENT_ID_SECRET",
+      "note": "",
+      "type": "String",
+      "value": "Visma-Net-Client-ID"
+    },
+    {
+      "name": "CLIENT_SECRET_SECRET",
+      "note": "",
+      "type": "String",
+      "value": "Visma-Net-Client-Secret"
+    },
+    {
+      "name": "TENANT_ID_SECRET",
+      "note": "",
+      "type": "String",
+      "value": "Visma-Net-Tenant-ID"
+    },
+    {
+      "name": "VISMA_PAGE_SIZE",
+      "note": "",
+      "type": "Integer",
+      "value": 1000
+    }
+  ]
+}

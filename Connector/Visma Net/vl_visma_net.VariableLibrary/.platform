@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "VariableLibrary",
+    "displayName": "vl_visma_net"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f56f65a9-657a-bdf7-49c2-0110621b003f"
+  }
+}

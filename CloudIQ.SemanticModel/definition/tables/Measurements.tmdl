@@ -1,0 +1,79 @@
+table Measurements
+	lineageTag: a2434246-3848-4a5b-b69c-08d5f2196062
+
+	measure 'Azure Plans' =
+			
+			CALCULATE (
+			    DISTINCTCOUNT ( 'LH_CloudIQ'[CompanyName] ),
+			    CONTAINSSTRING ( 'LH_CloudIQ'[AgreementName], "Azure Plan" )
+			)
+		formatString: #,0 st
+		lineageTag: 0eab9965-ee2b-465b-8096-6a2434312dea
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Power BI License' =
+			CALCULATE (
+			    DISTINCTCOUNT ( 'LH_CloudIQ'[CompanyName] ),
+			    CONTAINSSTRING ( 'LH_CloudIQ'[AgreementName], "Microsoft License-Ba" )
+			)
+		formatString: 0
+		lineageTag: 0be51ad8-268d-4c95-8389-d90304f3a531
+
+	measure Margin = SUM('LH_CloudIQ'[ProProratedResellerSalesPriceTotal]) - SUM('LH_CloudIQ'[PriceBeforeMarkup])
+		formatString: #,0 kr
+		lineageTag: 7f303e1a-f4f7-4889-ad1d-e2c94118aa0c
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Antalet Kunder' = DISTINCTCOUNT('LH_CloudIQ'[CompanyName])
+		formatString: #,0 st
+		lineageTag: 2b3e615c-f3c8-437d-b338-8ea9b3399e84
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure Inköpspris = SUM('LH_CloudIQ'[PriceBeforeMarkup])
+		formatString: #,0 kr
+		lineageTag: ce7d8946-5093-48de-afd0-385e76fdcd37
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure Säljpris = SUM('LH_CloudIQ'[ProProratedResellerSalesPriceTotal])
+		formatString: #,0 kr
+		lineageTag: afa4e684-e594-464b-818d-c78df89f6f21
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Antal enheter' = SUM('LH_CloudIQ'[Quantity])
+		formatString: #,0 st
+		lineageTag: 6fa233b3-60d4-43aa-a058-74899608dc7b
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Pris per enhet' = SUM('LH_CloudIQ'[UnitPrice])
+		formatString: #,0 kr
+		lineageTag: 72f3e555-7933-4f67-8f70-8266a059ab3f
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Vinstmarginal %' = DIVIDE([Säljpris]-[Inköpspris],[Inköpspris])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 31858d45-70f5-46d3-8cab-91369c2933dc
+
+	column Column
+		formatString: 0
+		lineageTag: 21774780-93df-4272-b7cf-22178caac519
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Measurements = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = ea51e97385fb4c0ca11a4d6bd6ab68f2
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

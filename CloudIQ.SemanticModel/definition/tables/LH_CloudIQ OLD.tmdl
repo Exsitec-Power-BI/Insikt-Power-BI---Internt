@@ -1,0 +1,490 @@
+table 'LH_CloudIQ OLD'
+	lineageTag: 39700a2d-ee49-42aa-8cc3-abb9cfd30cdb
+
+	column ParentBillingStatementId
+		dataType: int64
+		formatString: 0
+		lineageTag: 96d4d536-8a06-42a8-9989-6df23be7f865
+		summarizeBy: count
+		sourceColumn: ParentBillingStatementId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExternalOrderReference
+		dataType: string
+		lineageTag: 4cc28c01-7958-4f78-8052-24f484a5233c
+		summarizeBy: none
+		sourceColumn: ExternalOrderReference
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDate
+		dataType: string
+		lineageTag: b08a9460-e797-4dce-aec5-cda09c1deddd
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column SKUID
+		dataType: string
+		lineageTag: 06be615d-320d-43d4-b413-3845e65555b6
+		summarizeBy: none
+		sourceColumn: SKUID
+
+		annotation SummarizationSetBy = Automatic
+
+	column AvailabilityId
+		dataType: string
+		lineageTag: a0686cfe-f1c2-4bd1-a416-84278803268c
+		summarizeBy: none
+		sourceColumn: AvailabilityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column SkuName
+		dataType: string
+		lineageTag: f08eb9ba-1717-41fb-99d2-c3005099e770
+		summarizeBy: none
+		sourceColumn: SkuName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductName
+		dataType: string
+		lineageTag: e2728b6a-9455-472d-bd6d-44ae7fd29be7
+		summarizeBy: none
+		sourceColumn: ProductName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ChargeTypeId
+		dataType: string
+		lineageTag: 3dbd12fe-49e0-42c4-9892-f9b42271ad3a
+		summarizeBy: none
+		sourceColumn: ChargeTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ChargeType
+		dataType: string
+		lineageTag: 49712633-5451-46e6-ae7f-f95620ce89e0
+		summarizeBy: none
+		sourceColumn: ChargeType
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResellerPrice
+		dataType: double
+		lineageTag: fd6a538b-bdd0-4879-b512-9258c73ab33d
+		summarizeBy: sum
+		sourceColumn: ResellerPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CustomerCountry
+		dataType: string
+		lineageTag: 18d3b22c-7997-43f7-a912-13052f1ef956
+		summarizeBy: none
+		sourceColumn: CustomerCountry
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreditReasonCode
+		dataType: string
+		lineageTag: aa7ebcfd-73c6-4b0d-8926-2f9cfc54bfc2
+		summarizeBy: none
+		sourceColumn: CreditReasonCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubscriptionStartDate
+		dataType: string
+		lineageTag: 90829c10-ecca-44a3-a545-ac61a7439d17
+		summarizeBy: none
+		sourceColumn: SubscriptionStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubscriptionEndDate
+		dataType: string
+		lineageTag: 5df5425d-e345-40ac-a7e8-6434e0b6ee97
+		summarizeBy: none
+		sourceColumn: SubscriptionEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReferenceId
+		dataType: string
+		lineageTag: cdfc24b9-0f98-432b-b318-fc0ac2b62793
+		summarizeBy: none
+		sourceColumn: ReferenceId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductQualifiers
+		dataType: string
+		lineageTag: 04b99d14-573a-40ec-8b12-a7ff24927c8f
+		summarizeBy: none
+		sourceColumn: ProductQualifiers
+
+		annotation SummarizationSetBy = Automatic
+
+	column PublisherName
+		dataType: string
+		lineageTag: a90dbae0-7fae-44d6-af65-825c395592c7
+		summarizeBy: none
+		sourceColumn: PublisherName
+
+		annotation SummarizationSetBy = Automatic
+
+	column PublisherId
+		dataType: string
+		lineageTag: dab707a0-9dc2-4525-92d7-6f58fa864bd3
+		summarizeBy: none
+		sourceColumn: PublisherId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstimatedRetailPrice
+		dataType: double
+		lineageTag: 00e809a8-27cd-4c47-929a-7ad81e3a614f
+		summarizeBy: sum
+		sourceColumn: EstimatedRetailPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PublisherCustomerId
+		dataType: string
+		lineageTag: 7195a783-3d7a-4572-861f-6cd5417e3ef3
+		summarizeBy: none
+		sourceColumn: PublisherCustomerId
+
+		annotation SummarizationSetBy = Automatic
+
+	column PublisherSubscriptionId
+		dataType: string
+		lineageTag: 0b12a80f-2b47-436f-b222-89dc5d8188c4
+		summarizeBy: none
+		sourceColumn: PublisherSubscriptionId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TermAndBillingCycle
+		dataType: string
+		lineageTag: a814fde4-8918-4980-81c4-be1293b4f86e
+		summarizeBy: none
+		sourceColumn: TermAndBillingCycle
+
+		annotation SummarizationSetBy = Automatic
+
+	column BillingFrequency
+		dataType: string
+		lineageTag: 6493dcfc-9a48-4f70-a3a2-5be09a283fdb
+		summarizeBy: none
+		sourceColumn: BillingFrequency
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubscriptionName
+		dataType: string
+		lineageTag: ef938022-1210-4415-b927-a98398e42f8c
+		summarizeBy: none
+		sourceColumn: SubscriptionName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ChargeStartDate
+		dataType: string
+		lineageTag: 475d3563-bcdb-49df-8a82-dff999d724e1
+		summarizeBy: none
+		sourceColumn: ChargeStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ChargeEndDate
+		dataType: string
+		lineageTag: cc16c68b-3a7e-4f5a-ba75-e92f4eea28b1
+		summarizeBy: none
+		sourceColumn: ChargeEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReservationOrderId
+		dataType: string
+		lineageTag: 86a2c16e-1454-423b-a211-b6f2db8ecf07
+		summarizeBy: none
+		sourceColumn: ReservationOrderId
+
+		annotation SummarizationSetBy = Automatic
+
+	column BenefitId
+		dataType: string
+		lineageTag: b7094371-be4b-4de1-977e-ea02b338dad2
+		summarizeBy: none
+		sourceColumn: BenefitId
+
+		annotation SummarizationSetBy = Automatic
+
+	column BenefitType
+		dataType: string
+		lineageTag: 180d1fc7-fbf1-4d72-9b40-60f6f8ea78b9
+		summarizeBy: none
+		sourceColumn: BenefitType
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProratedResellerSalesUnitPrice
+		dataType: double
+		lineageTag: 70885587-d40e-4c4b-a02b-72d095a5a301
+		summarizeBy: sum
+		sourceColumn: ProratedResellerSalesUnitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProProratedResellerSalesPriceTotal
+		dataType: double
+		formatString: #,0 kr
+		lineageTag: 96732fe9-3a56-4ad9-92e0-2bd1eebc3a02
+		summarizeBy: sum
+		sourceColumn: ProProratedResellerSalesPriceTotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column ERP
+		dataType: double
+		lineageTag: 45feb693-e736-4650-808b-5d911b229766
+		summarizeBy: sum
+		sourceColumn: ERP
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ERPProrated
+		dataType: double
+		lineageTag: c2b57442-132e-4004-a2b5-9d1f9a978284
+		summarizeBy: sum
+		sourceColumn: ERPProrated
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Type
+		dataType: string
+		lineageTag: 0d73faff-af41-4ef5-a238-8f9a77dbaaaa
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrganizationName
+		dataType: string
+		lineageTag: 66461918-dde8-49c5-9826-83fc835103ee
+		summarizeBy: none
+		sourceColumn: OrganizationName
+
+		annotation SummarizationSetBy = Automatic
+
+	column PeriodMonth
+		dataType: string
+		lineageTag: 89a81dfc-9bd8-42dd-a90c-b9d817530327
+		summarizeBy: none
+		sourceColumn: PeriodMonth
+
+		annotation SummarizationSetBy = Automatic
+
+	column PeriodYear
+		dataType: string
+		lineageTag: 52997711-20f1-432e-b4de-77f02473e4d3
+		summarizeBy: none
+		sourceColumn: PeriodYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyName
+		dataType: string
+		lineageTag: ddfe2d51-c37f-463b-9c51-3dfa2a561adc
+		summarizeBy: none
+		sourceColumn: CompanyName
+
+		annotation SummarizationSetBy = Automatic
+
+	column TenantReference
+		dataType: string
+		lineageTag: 3edf0bb4-47c0-4bf8-896a-726e167d1aee
+		summarizeBy: none
+		sourceColumn: TenantReference
+
+		annotation SummarizationSetBy = Automatic
+
+	column AgreementName
+		dataType: string
+		lineageTag: 11658ea9-05e5-40f8-9aea-984f2dc1d765
+		summarizeBy: none
+		sourceColumn: AgreementName
+
+		annotation SummarizationSetBy = Automatic
+
+	column TenantPrimaryDomain
+		dataType: string
+		lineageTag: a963dbfa-3040-4acf-8d13-fc3e45981d26
+		summarizeBy: none
+		sourceColumn: TenantPrimaryDomain
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductId
+		dataType: string
+		lineageTag: 526f596d-cb75-444a-9a29-08421c8c0470
+		summarizeBy: none
+		sourceColumn: ProductId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Publisher
+		dataType: string
+		lineageTag: 994116df-56e2-4659-94c9-296a59336b0f
+		summarizeBy: none
+		sourceColumn: Publisher
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitPrice
+		dataType: double
+		lineageTag: 2ab62d77-89c8-4264-af84-a5615604afd8
+		summarizeBy: sum
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Quantity
+		dataType: double
+		lineageTag: 4a88cca5-749d-47b0-811c-fdbf0168ef1e
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Unit
+		dataType: string
+		lineageTag: d5fb5850-f1c2-4965-a5e4-a02af58ec9b0
+		summarizeBy: none
+		sourceColumn: Unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column Currency
+		dataType: string
+		lineageTag: 23a6c3af-10f6-4b03-a74d-37e252fa43cf
+		summarizeBy: none
+		sourceColumn: Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResellerSalesPricePriceType
+		dataType: string
+		lineageTag: ad86a711-dbc1-42f1-9c50-978c549c52ec
+		summarizeBy: none
+		sourceColumn: ResellerSalesPricePriceType
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResellerMarkupPercent
+		dataType: double
+		lineageTag: deb437ce-5f10-4a4f-b315-0918667ebe7a
+		summarizeBy: sum
+		sourceColumn: ResellerMarkupPercent
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ResellerMarkup
+		dataType: double
+		lineageTag: 1c5b9db3-6a36-4368-b42f-b8d34e75c7dd
+		summarizeBy: sum
+		sourceColumn: ResellerMarkup
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ResellerSalesUnitPrice
+		dataType: double
+		lineageTag: b632ac7d-214d-4d5f-8372-1e9815295178
+		summarizeBy: sum
+		sourceColumn: ResellerSalesUnitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ResellerSalesPriceTotal
+		dataType: double
+		lineageTag: 1970f2a4-eaef-495c-aeb9-d0f1389cc539
+		summarizeBy: sum
+		sourceColumn: ResellerSalesPriceTotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PriceBeforeMarkup
+		dataType: double
+		formatString: #,0 kr
+		lineageTag: 7669a9fc-2795-4f0a-be6e-5fc7bb45c36b
+		summarizeBy: sum
+		sourceColumn: PriceBeforeMarkup
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column YearMonth
+		dataType: string
+		lineageTag: 2f270614-8d1d-4bef-bebd-1fcb18ebd108
+		summarizeBy: none
+		sourceColumn: YearMonth
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'LH_CloudIQ OLD' = m
+		mode: import
+		source = ```
+				let
+				    Source = Sql.Databases("a3xfpnwfvfzezauodmmudbnrie-2pimstj4sgketpeef3vvogbfcy.datawarehouse.fabric.microsoft.com"),
+				    LH_CloudIQ = Source{[Name="LH_CloudIQ"]}[Data],
+				    dbo_LH_CloudIQ = LH_CloudIQ{[Schema="dbo",Item="LH_CloudIQ"]}[Data],
+				    
+				    #"Added custom" = Table.AddColumn(dbo_LH_CloudIQ, "PriceBeforeMarkup", each [UnitPrice] * [Quantity]),
+				    
+				
+				    #"Added custom 1" = Table.AddColumn(#"Added custom", "YearMonth", each Number.ToText([PeriodYear]) & "-" & Number.ToText([PeriodMonth], "00"), type text),
+				    
+				
+				    #"Changed column type" = Table.TransformColumnTypes(#"Added custom 1", {{"PriceBeforeMarkup", type number}})
+				
+				in
+				    #"Changed column type"
+				```
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

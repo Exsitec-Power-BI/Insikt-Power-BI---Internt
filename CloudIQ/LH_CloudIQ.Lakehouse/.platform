@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "LH_CloudIQ"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fbcea57b-1086-b72b-457c-0fd9a97f71ea"
+  }
+}

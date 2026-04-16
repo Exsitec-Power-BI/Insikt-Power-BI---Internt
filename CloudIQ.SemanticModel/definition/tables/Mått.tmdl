@@ -1,0 +1,52 @@
+table Mått
+	lineageTag: 93428fa1-275c-459a-87b8-7832fe500996
+
+	column Mått
+		lineageTag: 49910789-ff48-453d-9020-bd2cf501cc28
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Mått Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Mått Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mått Fields'
+		isHidden
+		lineageTag: f1610004-a702-4835-bcc2-514942628de3
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Mått Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mått Order'
+		isHidden
+		formatString: 0
+		lineageTag: 45b9bb8a-67e8-486d-9c73-140ab1baee72
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Mått = calculated
+		mode: import
+		source =
+				{
+				    ("Inköpspris", NAMEOF('Measurements'[Inköpspris]), 0),
+				    ("Säljpris", NAMEOF('Measurements'[Säljpris]), 1),
+				    ("Vinst", NAMEOF('Measurements'[Margin]), 2),
+				    ("Antal enheter", NAMEOF('Measurements'[Antal enheter]), 3),
+				    ("Pris per enhet", NAMEOF('Measurements'[Pris per enhet]), 4),
+				    ("Vinstmarginal %", NAMEOF('Measurements'[Vinstmarginal %]), 5)
+				}
+
+	annotation PBI_Id = 2df320204090421bbc602262c5b647b7
+

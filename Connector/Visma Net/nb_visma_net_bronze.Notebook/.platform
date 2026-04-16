@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "nb_visma_net_bronze"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "398fa00d-d3ae-a231-44d8-7d9379a1264d"
+  }
+}

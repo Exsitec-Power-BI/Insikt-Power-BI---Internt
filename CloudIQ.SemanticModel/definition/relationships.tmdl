@@ -1,0 +1,8 @@
+relationship 8a57a0a1-56f3-5fcf-3e27-f887729b1995
+	fromColumn: 'LH_CloudIQ OLD'.YearMonth
+	toColumn: DimMonths.YearMonth
+
+relationship ffd43e5a-ecb9-0e8a-f2e4-80f03d99149d
+	fromColumn: LH_CloudIQ.YearMonth
+	toColumn: DimMonths.YearMonth
+

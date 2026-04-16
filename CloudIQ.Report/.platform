@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "CloudIQ"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4fc3d2f5-bd0c-9408-427e-b9cd2a5461a8"
+  }
+}

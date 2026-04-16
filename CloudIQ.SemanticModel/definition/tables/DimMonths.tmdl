@@ -1,0 +1,84 @@
+table DimMonths
+	lineageTag: aa0bb326-cd18-4cc2-b22a-53bfdffa6fdc
+
+	column Year
+		formatString: 0
+		lineageTag: b68978b4-8492-447b-8713-e16ef404ab74
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNo
+		formatString: 0
+		lineageTag: cd98b8ea-2dab-45cf-9f80-efed5bc23673
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [MonthNo]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		lineageTag: 63022e9c-02ba-4080-8426-463e3aee2e29
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month]
+		sortByColumn: MonthNo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		lineageTag: 195013b9-0235-4713-8135-1182a5c4d421
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearMonth
+		lineageTag: 234a19c1-528b-4c9b-b265-9b2a6553740d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: LH_CloudIQ OLD[YearMonth]
+
+		annotation SummarizationSetBy = Automatic
+
+	column QuarterNo
+		lineageTag: a39ff469-029a-4e79-8dbe-f3cfa1d5caed
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [QuarterNo]
+
+		annotation SummarizationSetBy = Automatic
+
+	column QuarterYear
+		lineageTag: 927e6d93-e4f5-4fcb-8e2c-752c7d5f3857
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [QuarterYear]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimMonths = calculated
+		mode: import
+		source = ```
+				
+				SUMMARIZE (
+				    // Start with a distinct list of YearMonth values from your fact table
+				    DISTINCT ( 'LH_CloudIQ OLD'[YearMonth] ),
+				    
+				    // Add the columns you need for the hierarchy
+				    'LH_CloudIQ OLD'[YearMonth],
+				    "Year", VALUE ( LEFT ( 'LH_CloudIQ OLD'[YearMonth], 4 ) ),
+				    "MonthNo", VALUE ( RIGHT ( 'LH_CloudIQ OLD'[YearMonth], 2 ) ),
+				    "QuarterNo", FORMAT ( DATE ( VALUE ( LEFT ( 'LH_CloudIQ OLD'[YearMonth], 4 ) ), VALUE ( RIGHT ( 'LH_CloudIQ OLD'[YearMonth], 2 ) ), 1 ), "q" ),
+				    "Quarter", "Q" & FORMAT ( DATE ( VALUE ( LEFT ( 'LH_CloudIQ OLD'[YearMonth], 4 ) ), VALUE ( RIGHT ( 'LH_CloudIQ OLD'[YearMonth], 2 ) ), 1 ), "q" ),
+				    "Month", FORMAT ( DATE ( VALUE ( LEFT ( 'LH_CloudIQ OLD'[YearMonth], 4 ) ), VALUE ( RIGHT ( 'LH_CloudIQ OLD'[YearMonth], 2 ) ), 1 ), "mmmm" ),
+				
+				    "QuarterYear", FORMAT ( DATE ( VALUE ( LEFT ( 'LH_CloudIQ OLD'[YearMonth], 4 ) ), VALUE ( RIGHT ( 'LH_CloudIQ OLD'[YearMonth], 2 ) ), 1 ), "yyyy" ) & " Q" & FORMAT ( DATE ( VALUE ( LEFT ( 'LH_CloudIQ OLD'[YearMonth], 4 ) ), VALUE ( RIGHT ( 'LH_CloudIQ OLD'[YearMonth], 2 ) ), 1 ), "q" )
+				)
+				```
+
+	annotation PBI_Id = 6f2123d020f64d089aa71aa164d55619
+
